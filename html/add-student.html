@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script type="text/javascript" src="../js/add-student.js"></script>
+    <title>Add New Student</title>
+</head>
+
+<body class=" bg-light">
+    <h2 class="font-weight-bold bg-dark p-2 pb-3 text-center text-white">Add New Student</h2>
+    <div class="container p-5">
+        <div class="d-flex justify-content-center">
+            <div class="card w-50">
+                <div class="card-body">
+                    <form action="http://localhost:8888/lti/servers/add-student.php" method="POST">
+                        <div class="form-group">
+                            <label class="font-weight-bold">Student ID</label>
+                            <input type="number" class="form-control" name="student_id" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-weight-bold">Student Name</label>
+                            <input type="name" class="form-control" id="name" name="student_name" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-weight-bold">Gender</label>
+                            <div class="form-check">
+                                <input class="form-check-input position-static" type="radio" value="Male" name="student_gender" required>
+                                <label>Male</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input position-static" type="radio" name="student_gender" value="Female" required>
+                                <label>Female</label>
+                            </div>
+                            <div class="form-group">
+                                <label class="font-weight-bold">Date of Birth</label>
+                                <input class="form-control w-50" type="date" name="student_dob" id="student_birth" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="font-weight-bold">City</label>
+                                <input type="text" class="form-control" name="student_city" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="font-weight-bold">State</label>
+                                <input type="text" class="form-control" name="student_state" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="font-weight-bold">Email Id</label>
+                                <input type="email" class="form-control" name="student_email" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="font-weight-bold">Qualification</label>
+                                <input type="text" class="form-control" name="student_qualification" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="font-weight-bold">Stream</label>
+                                <input type="text" class="form-control" name="student_stream" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
